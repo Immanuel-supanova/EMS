@@ -1,14 +1,17 @@
 package main
 
 import (
-	"log"
-	"net/http"
+	"fmt"
+	"os"
+
+	"github.com/immanuel-supanova/EMS/server/settings"
 )
 
+func init() {
+	settings.Config()
+}
 func main() {
-
-	log.Fatal(http.ListenAndServe(":8080", http.FileServer(http.Dir("../src"))))
-
+	fmt.Println(os.Getenv("DB"))
 }
 
 // npx tailwindcss -i ./src/main.css -o ./src/style.css --watch
