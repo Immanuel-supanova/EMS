@@ -11,6 +11,7 @@ import (
 func init() {
 	settings.Config()
 	databases.ConnectToDb()
+	databases.SyncDatabase()
 }
 func main() {
 	fmt.Println(os.Getenv("DB"))

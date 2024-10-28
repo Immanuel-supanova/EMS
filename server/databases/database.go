@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/immanuel-supanova/EMS/server/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -21,5 +22,18 @@ func ConnectToDb() {
 	} else {
 		log.Println("Success connecting to db")
 	}
+
+}
+
+func SyncDatabase() {
+	DB.AutoMigrate(&models.Employee{})
+	DB.AutoMigrate(&models.Job{})
+	DB.AutoMigrate(&models.Contact{})
+	DB.AutoMigrate(&models.Profile{})
+	DB.AutoMigrate(&models.Enquiry{})
+	DB.AutoMigrate(&models.Raise{})
+	DB.AutoMigrate(&models.Leave{})
+	DB.AutoMigrate(&models.Question{})
+	DB.AutoMigrate(&models.Advance{})
 
 }
