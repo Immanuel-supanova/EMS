@@ -48,17 +48,17 @@
                             Full-stack developer <br>
                         </p>
                         <div class="text-center py-1">
-                            <p>Start Date:-11/11/2011|End Date:-11/12/2011 </p>
+                            <p>Amount: 31,000 </p>
                         </div>
                     </div>
                     <div class="border-t">
-
-                        <form method="post" class="px-8 pt-6 pb-8 mb-4 max-w-md mx-auto">
-                            <div class="mb-4">
-                                <button type="submit"
-                                    class="w-full py-3 px-4 text-white font-semibold bg-gray-500 rounded-md focus:outline-none focus:bg-gray-600 hover:bg-gray-600">Approve</button>
-                            </div>
-                        </form>
+                        <div class="px-8 pt-6 pb-8 mb-4 max-w-md mx-auto row flex">
+                            <button hx-get="/raise-form.html" hx-target="#app"
+                                class="w-full py-3 px-4 me-3 text-white font-semibold bg-gray-500 rounded-md focus:outline-none focus:bg-gray-600 hover:bg-gray-600">Edit</button>
+                            <p></p>
+                            <button hx-get="/profile.html" hx-confirm="Are you sure?" hx-target="#app"
+                                class="w-full py-3 px-4 text-white font-semibold bg-gray-500 rounded-md focus:outline-none focus:bg-gray-600 hover:bg-gray-600">Delete</button>
+                        </div>
                     </div>
                 </div>
 
