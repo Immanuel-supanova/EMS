@@ -99,12 +99,14 @@
         <footer class="bg-black py-6 mt-10">
             <div class="container mx-auto px-4">
                 <div class="flex justify-center space-x-6 text-sm text-white">
-                    <a href="#" class="hover:text-white p-2">Leave</a>
-                    <a href="#" class="hover:text-white p-2">Enquiry</a>
-                    <a href="#" class="hover:text-white p-2">Advance</a>
-                    <a href="#" class="hover:text-white p-2">Raise</a>
-                    <a href="#" class="hover:text-white p-2">Change Password</a>
-                    <a href="#" class="hover:text-white p-2">Reset Password</a>
+                    <button hx-get="/leave-form.html" hx-target="#app">Leave</button>
+                    <button hx-get="/enquiry.html" hx-target="#app">Enquiry</button>
+                    <button hx-get="/advance-form.html" hx-target="#app">Advance</button>
+                    <button hx-get="/raise-form.html" hx-target="#app">Raise</button>
+                    <button hx-get="/check-email.html" hx-confirm="Are you sure?" hx-target="#dom">Change
+                        Password</button>
+                    <button hx-get="/check-email.html" hx-confirm="Are you sure?" hx-target="#dom">Reset
+                        Password</button>
                 </div>
                 <p class="text-center text-white text-4xl mt-4 p-2">EMS</p>
             </div>
